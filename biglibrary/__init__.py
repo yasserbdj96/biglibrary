@@ -25,7 +25,12 @@ class biglibrary:
 
     #center:
     def center(self,text):
-        w,h=os.get_terminal_size()
+        try:
+            import shutil
+            ts = shutil.get_terminal_size(fallback=(120, 50))
+        except:
+            ts=os.get_terminal_size(0)
+        w=ts.columns
         texttocenter=len(text)
         w=((w-texttocenter)/2)
         w=str(w).split(".")[0]
