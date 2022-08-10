@@ -27,5 +27,5 @@ bl=biglibrary()# Default returning=False, False for print, True for return.
 bl.center(str)
 
 # Arrange list and items according to the length of the command line interface:
-bl.lslist(lslist,separator=" | ")# Default separator=" | ".
+#bl.lslist(lslist,separator=" | ")# Default separator=" | ".
 #}END.

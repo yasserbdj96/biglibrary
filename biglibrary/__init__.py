@@ -12,7 +12,7 @@
 #   |                                                          |
 
 #START{
-import os,sys
+import os
 
 #start biglibrary class:
 class biglibrary:
@@ -38,7 +38,7 @@ class biglibrary:
         except:
             print(text)
     
-    def lslist(self,lslist,separator='|',argv=sys.argv):
+    def lslist(self,lslist,separator='|'):
         lslist_final=""
         try:
             import shutil
@@ -59,7 +59,4 @@ class biglibrary:
                 return lslist_final
         except:
             print(lslist_final)
-
-        if __name__ == "__main__":
-	        sys.exit(lslist())
 #}END.
