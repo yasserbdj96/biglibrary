@@ -41,7 +41,7 @@ class biglibrary:
     def lslist(self,lslist,separator='|'):
         lslist_final=""
         try:
-            ts=os.get_terminal_size()
+            ts=os.get_terminal_size(0)
         except:
             import shutil
             ts = shutil.get_terminal_size(fallback=(120, 50))
