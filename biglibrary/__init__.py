@@ -40,7 +40,11 @@ class biglibrary:
     
     def lslist(self,lslist,separator='|'):
         lslist_final=""
-        ts=os.get_terminal_size()
+        try:
+            ts=os.get_terminal_size()
+        except:
+            import shutil
+            ts = shutil.get_terminal_size(fallback=(120, 50))
         ss=len(max(lslist,key=len))
         n=str(ts.columns/(ss+len(separator))).split(".")[0]
         for idx,key in enumerate(lslist):
