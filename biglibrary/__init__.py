@@ -20,7 +20,7 @@ class biglibrary:
     def __init__(self,**kwargs):
         try:
             self.retu=kwargs["returning"]
-        except:
+        except NameError as e:
             pass
 
     #center:
@@ -28,7 +28,7 @@ class biglibrary:
         try:
             import shutil
             ts = shutil.get_terminal_size(fallback=(120, 50))
-        except:
+        except NameError as e:
             ts=os.get_terminal_size(0)
         w=ts.columns
         texttocenter=len(text)
@@ -40,7 +40,7 @@ class biglibrary:
                 print(text)
             else:
                 return text
-        except:
+        except NameError as e:
             print(text)
     
     def lslist(self,lslist,separator='|'):
@@ -48,7 +48,7 @@ class biglibrary:
         try:
             import shutil
             ts = shutil.get_terminal_size(fallback=(120, 50))
-        except:
+        except NameError as e:
             ts=os.get_terminal_size(0)
         ss=len(max(lslist,key=len))
         n=str(ts.columns/(ss+len(separator))).split(".")[0]
@@ -62,6 +62,6 @@ class biglibrary:
                 print(lslist_final)
             else:
                 return lslist_final
-        except:
+        except NameError as e:
             print(lslist_final)
 #}END.
